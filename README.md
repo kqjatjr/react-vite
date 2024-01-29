@@ -173,3 +173,9 @@ npx eslint --init
   //...
 }
 ```
+
+## 문제 해결
+
+### The CJS build of Vite's Node API is deprecated. See https://vitejs.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.
+
+경고 문구의 링크를 들어가서 해결할 수 있었다. 해당 프로젝트에서 CommonJS (CJS) 가 아닌 ECMAScript Modules (ESM) 문법을 사용하고 있었기 때문에 package.json 파일에 "type": "module" 을 추가하여 default 를 ESM으로 설정하였다.
